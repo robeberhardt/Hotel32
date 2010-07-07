@@ -1,0 +1,1 @@
+﻿package com.thelab.hotel32.assets.fonts{	import flash.text.Font;		public class FuturaMedium extends Font	{		public static const NAME : String = "FuturaTMed";		public function FuturaMedium()		{		}	}}

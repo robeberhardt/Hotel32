@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<settings>
+		<paths>
+			<assets>
+				<url>assets</url>
+			</assets>
+			<!--
+				NOTE: window attribute defines whether it opens in the same window or a new window
+				use "blank" for a new window
+				use "self" for same window
+			-->
+			<booking>
+				<url window="blank"><![CDATA[https://reservations.mgmmirage.com/bookingengine.aspx?pid=MCH&ad=<<DATE>>&nights=<<NIGHTS>>]]></url>
+			</booking>
+			<terms>
+				<url window="blank"><![CDATA[https://reservations.mgmmirage.com/bookingengine.aspx?pid=MCH&ad=<<DATE>>&nights=<<NIGHTS>>]]></url>
+			</terms>
+			<privacy>
+				<url window="blank"><![CDATA[https://reservations.mgmmirage.com/bookingengine.aspx?pid=MCH&ad=<<DATE>>&nights=<<NIGHTS>>]]></url>
+			</privacy>
+		</paths>
+	</settings>
+	<views>
+		<video>
+			<preload>
+				<asset id="poster" url="video/video.jpg" bytes="74102" xpos="63" ypos="0" />
+				<asset id="videoUI" url="swf/videoUI.swf" bytes="7117" />
+				<asset id="hero" url="video/cut24-108-1060x540-trim.f4v" bytes="13279422" />
+			</preload>
+			<cuepoints>
+				<cuepoint time="4" id="limo-service">
+					<title><![CDATA[THE ONLY WAY TO ROLL]]></title>
+				</cuepoint>
+				<cuepoint time="12" id="vip-check-in">
+					<title><![CDATA[ATTENTION TO YOUR DETAILS]]></title>
+				</cuepoint>
+				<cuepoint time="16" id="private-elevator-access">
+					<title><![CDATA[KEY TO HAPPINESS]]></title>
+				</cuepoint>
+				<cuepoint time="19" id="personal-suite-assistant">
+					<title><![CDATA[BECK AND CALL]]></title>
+				</cuepoint>
+				<cuepoint time="26" id="mobile-concierge">
+					<title><![CDATA[FINGERTIPS]]></title>
+				</cuepoint>
+				<cuepoint time="37" id="lounge32">
+					<title><![CDATA[LOUNGE 32]]></title>
+				</cuepoint>
+				<cuepoint time="55" id="pillow-service">
+					<title><![CDATA[ELEVATED PERSPECTIVE]]></title>
+				</cuepoint>
+				<cuepoint time="59" id="city-center">
+					<title><![CDATA[EXTRAORDINARY NEIGHBORS]]></title>
+				</cuepoint>
+			</cuepoints>
+		</video>
+		<amenities>
+			<boxes>
+				<box id="limo-service">
+					<images thumb="limo" over="limo-over" detail="limo-detail" />
+					<title><![CDATA[THE ONLY WAY TO ROLL]]></title>
+					<detailTitle><![CDATA[COMPLIMENTARY LIMO SERVICE]]></detailTitle>
+					<detailCopy>
+						<![CDATA[The HOTEL32 experience begins the moment you saunter out of McCarran International Airport. Don’t even look at the taxi line, because a complimentary limo is ready, willing and able to kick things off in proper form. Let your driver grab your bags and deliver you to your suite in high style, because lifting a finger isn’t part of your HOTEL32 itinerary.
+						]]>
+					</detailCopy>
+				</box>
+					<box id="private-elevator-access">
+						<images thumb="luggage" over="luggage-over" detail="luggage-detail" />
+						<title><![CDATA[KEY TO HAPPINESS]]></title>
+						<detailTitle><![CDATA[HOTEL32 elevator with private access]]></detailTitle>
+						<detailCopy>
+							<![CDATA[Slip up to your room behind the glossy red doors of the designated HOTEL32 elevator. That’s right. A specially designed elevator, complete with private key card access, is waiting to whisk you to the luxurious haven of exclusivity and pampering that will soon be yours to indulge in. Going up?]]>
+						</detailCopy>
+					</box>
+				<box id="vip-check-in">
+					<images thumb="32" over="32-over" detail="32-detail" />
+					<title><![CDATA[VIP TREATMENT]]></title>
+					<detailTitle><![CDATA[VIP Check In]]></detailTitle>
+					<detailCopy>
+						<![CDATA[Forget about the standard front desk check in. At HOTEL32, life is different. Here, a little chore like registering becomes a simple act of pleasure—your Personal Suite Assistant will see to that. Take in the view while being escorted through your registration. Tour Lounge32, your fabulous suite and the amenities that await you. Sign your name. Viola.]]>
+					</detailCopy>
+				</box>
+				<box id="personal-suite-assistant">
+					<images thumb="lady" over="lady-over" detail="lady-detail" />
+					<title><![CDATA[BECK AND CALL]]></title>
+					<detailTitle><![CDATA[Personal Suite Assistant]]></detailTitle>
+					<detailCopy>
+						<![CDATA[Part of being celebrated is having your every whim attended to. To this end, each and every HOTEL32 guest is given exclusive access to their very own Personal Suite Assistant. Oh yes, your wish is their command. Revel in butler and concierge services ranging from a custom-stocked fridge per your requests to bath services and whatever else your pampered little self can think of.]]>
+					</detailCopy>
+				</box>
+				<box id="mobile-concierge">
+					<images thumb="iphone" over="iphone-over" detail="iphone-detail" />
+					<title><![CDATA[FINGERTIPS]]></title>
+					<detailTitle><![CDATA[Mobile Concierge]]></detailTitle>
+					<detailCopy>
+						<![CDATA[Take control of your destiny with HOTEL32’s in-room mobile concierge. Forget the genie in the bottle, that’s ancient history—it’s time to fulfill your wishes right from the palm of your hand. From spa appointments and dinner reservations to complimentary airport limo transportation—whatever your heart desires, your own electronic dream weaver is ready to make come true.]]>
+					</detailCopy>
+				</box>
+				<box id="lounge32">
+					<images thumb="martini" over="martini-over" detail="martini-detail" />
+					<title><![CDATA[LOUNGE32]]></title>
+					<detailTitle><![CDATA[Lounge32]]></detailTitle>
+					<detailCopy>
+						<![CDATA[Exclusive to guests of HOTEL32 is the plush and flush Lounge32. From cocktails and canapés in the evening to breakfast in the morning, Lounge32 is the icing on an already delectable cake. So take in the game on three large HDTV plasma flat screens. Gaze out the double bay windows overlooking CityCenter. Or just let our attentive lounge assistants spoil you rotten.]]>
+					</detailCopy>
+				</box>
+				<box id="pillow-service">
+					<images thumb="decor" over="decor-over" detail="decor-detail" />
+					<title><![CDATA[ELEVATED POV]]></title>
+					<detailTitle><![CDATA[32 stories above the Las Vegas Strip]]></detailTitle>
+					<detailCopy>
+						<![CDATA[Endless luxury and pampering are not the only things that will have you feeling above it all. Our spectacular 32nd floor location provides the ultimate perch to view all that glitters in Las Vegas . Gaze at the grandeur of CityCenter and the neon lights of The Strip. Partake of the brazen extravagance that surrounds you in your suite. Yes, you are on top of the world.]]>
+					</detailCopy>
+				</box>
+				<box id="city-center">
+					<images thumb="citycenter" over="citycenter-over" detail="citycenter-detail" />
+					<title><![CDATA[GORGEOUS NEIGHBORS]]></title>
+					<detailTitle><![CDATA[CityCenter a stone’s throw away]]></detailTitle>
+					<detailCopy>
+						<![CDATA[If one is judged by the company one keeps, you’ll want to become fast friends with HOTEL32’s new  next door neighbor, the magnificent CityCenter. This architectural wonder holds the incomparable Crystals retail and entertainment district, world-class dining and numerous pieces of fine art. With new friends like this, you can unload some of your old dusty ones.]]>
+					</detailCopy>
+				</box>
+			</boxes>
+			<preload>
+				<asset id="grid" url="images/grid.png" bytes="425860" xpos="86" ypos="10" />
+				<asset id="limo" url="amenities/limo.jpg" bytes="10098" />
+				<asset id="limo-over" url="amenities/limo-over.jpg" bytes="10098" />
+				<asset id="limo-detail" url="amenities/limo-detail.jpg" bytes="27099" />
+				<asset id="32" url="amenities/32.jpg" bytes="14177" />
+				<asset id="32-over" url="amenities/32-over.jpg" bytes="14177" />
+				<asset id="32-detail" url="amenities/32-detail.jpg" bytes="27099" />
+				<asset id="luggage" url="amenities/luggage.jpg" bytes="16375" />
+				<asset id="luggage-over" url="amenities/luggage-over.jpg" bytes="16375" />
+				<asset id="luggage-detail" url="amenities/luggage-detail.jpg" bytes="27099" />
+				<asset id="lady" url="amenities/lady.jpg" bytes="11343" />
+				<asset id="lady-over" url="amenities/lady-over.jpg" bytes="11343" />
+				<asset id="lady-detail" url="amenities/lady-detail.jpg" bytes="27099" />
+				<asset id="iphone" url="amenities/iphone.jpg" bytes="9771" />
+				<asset id="iphone-over" url="amenities/iphone-over.jpg" bytes="9771" />
+				<asset id="iphone-detail" url="amenities/iphone-detail.jpg" bytes="27099" />
+				<asset id="martini" url="amenities/martini.jpg" bytes="9824" />
+				<asset id="martini-over" url="amenities/martini-over.jpg" bytes="9824" />
+				<asset id="martini-detail" url="amenities/martini-detail.jpg" bytes="27099" />
+				<asset id="decor" url="amenities/decor.jpg" bytes="15427" />
+				<asset id="decor-over" url="amenities/decor-over.jpg" bytes="15427" />
+				<asset id="decor-detail" url="amenities/decor-detail.jpg" bytes="27099" />
+				<asset id="citycenter" url="amenities/citycenter.jpg" bytes="22357" />
+				<asset id="citycenter-over" url="amenities/citycenter-over.jpg" bytes="22357" />
+				<asset id="citycenter-detail" url="amenities/citycenter-detail.jpg" bytes="27099" />
+			</preload>
+		</amenities>
+		<rooms>
+			<preload>
+				<asset id="room1" url="rooms/boxes/room1.jpg" bytes="35561" />
+				<asset id="room1-over" url="rooms/boxes/room1.jpg" bytes="35561" />
+				<asset id="room1-detail" url="rooms/boxes/room1-detail.jpg" bytes="138421" />
+				<asset id="room2" url="rooms/boxes/room2.jpg" bytes="26926" />
+				<asset id="room2-over" url="rooms/boxes/room2.jpg" bytes="26926" />
+				<asset id="room2-detail" url="rooms/boxes/room2-detail.jpg" bytes="53352" />
+				<asset id="room3" url="rooms/boxes/room3.jpg" bytes="27197" />
+				<asset id="room3-over" url="rooms/boxes/room3.jpg" bytes="27197" />
+				<asset id="room3-detail" url="rooms/boxes/room3-detail.jpg" bytes="58519" />
+				<asset id="room4" url="rooms/boxes/room4.jpg" bytes="42606" />
+				<asset id="room4-over" url="rooms/boxes/room4.jpg" bytes="42606" />
+				<asset id="room4-detail" url="rooms/boxes/room4-detail.jpg" bytes="84258" />
+			</preload>
+			<boxes>
+				<box id="STUDIOS">
+					<images thumb="room1" over="room1-over" detail="room1-detail" />
+					<title><![CDATA[STUDIOS]]></title>
+				</box>
+					<box id="SUITES">
+						<images thumb="room2" over="room2-over" detail="room2-detail" />
+						<title><![CDATA[SUITES]]></title>
+					</box>
+				<box id="LOFTS">
+					<images thumb="room3" over="room3-over" detail="room3-detail" />
+					<title><![CDATA[LOFTS]]></title>
+				</box>
+				<box id="PENTS">
+					<images thumb="room4" over="room4-over" detail="room4-detail" />
+					<title><![CDATA[PENTS]]></title>
+				</box>
+			</boxes>
+			<panel>
+				<tabs>
+					<tab id="STUDIOS">
+						<headline><![CDATA[12 different kinds of pillows to choose from. What more do you need to know?]]></headline>
+						<copy><![CDATA[Over 400 sq. ft. of space • Personal Suite Assistant • Mobile Concierge iPhone • California King with 300-thread count Egyptian-cotton sheets • iHome alarm clock and iPod docking station • A prestocked fridge per your requests • 42" HDTV plasma flat screen • Media desk • Oversized shower • Kiehl’s luxury bath products • Complimentary newspaper, pressing and shoe polishing]]></copy>
+						<images>
+							<image id="studio1" url="rooms/studios/studio1.jpg" bytes="138408" />
+							<image id="studio2" url="rooms/studios/studio2.jpg" bytes="138408" />
+							<image id="studio3" url="rooms/studios/studio3.jpg" bytes="138408" />
+						</images>
+					</tab>
+					<tab id="SUITES">
+					<headline><![CDATA[Too much of everything is just enough.]]></headline>
+					<copy><![CDATA[700 or 825 sq. ft. of space with option to connect to Studio • Personal Suite Assistant • California King bed with Eqyptian-cotton sheets • Mobile Concierge iPhone • 42-inch HDTV flat-screen plasmas plus Blu-ray • iHome alarm clock and iPod docking station • A prestocked fridge per your requests • A spacious shower and hydrotherapy soaking tub • Kiehl’s bath products • His and hers vanity sinks]]></copy>
+						<images>
+							<image id="suite1" url="rooms/suites/suite1.jpg" bytes="" />
+							<image id="suite2" url="rooms/suites/suite2.jpg" bytes="" />
+							<image id="suite3" url="rooms/suites/suite3.jpg" bytes="" />
+							<image id="suite4" url="rooms/suites/suite4.jpg" bytes="" />
+							<image id="suite5" url="rooms/suites/suite5.jpg" bytes="" />
+						</images>
+					</tab>
+					<tab id="LOFTS">
+						<headline><![CDATA[Okay, after this one you have two wishes left.]]></headline>
+						<copy><![CDATA[Approx 1200 sq. ft. of space • Option to connect to Studio for 2 bedrooms and 1600 sq. ft. • Suite Assistant Services * Mobile Concierge iPhone • Entertainment great room • Creston controller for drapes, music, TV, lighting, etc. • 50" plasma in great room and 42" plasma in dining area • Prestocked fridge per your requests • Jura espresso/coffee maker • Office media center • Ultra King bed (6" longer and wider than traditional King) • iHome alarm clock and iPod docking station • A Kohler Chromatherapy steam shower, big enough for you and all your friends • Kiehl’s bath products • A 15" in-mirror integrated TV in bathroom • His and hers vanity sinks • Hydrotherapy soaking tub]]></copy>
+						<images>
+							<image id="loft1" url="rooms/lofts/loft1.jpg" bytes="" />
+							<image id="loft2" url="rooms/lofts/loft2.jpg" bytes="" />
+						</images>
+					</tab>
+					<tab id="PENTS">
+						<headline><![CDATA[Climb Mt. Everest. Sail around the world. Make love on a deserted beach. Stay here.]]></headline>
+						<copy><![CDATA[• 1600-2000 sq. ft. with options for adjoining <br>• Personal Suite Assistant <br>• Mobile Concierge iPhone <br>• Entertainment great room with 65" HDTV flat screen plasmas <br>• Additional plasmas throughout penthouse <br>• Blu-ray<br>• Creston controller for drapes, TV, lighting  <br>• Wet bar and prestocked fridge per your requests <br>• Option for pool table or dining room <br>• Jura espresso/coffee maker <br>• Office area • Master and 2nd bedroom with Ultra King <br>• iPod docking station <br>• Unbelievably huge Kohler Chromatherapy steam shower <br>• Kiehl’s bath products <br>• 15" in-mirror integrated TV in master bath <br>• His & hers vanity sinks • Hydrotherapy soaking tub <br>• Additional 1/2 bath <br>• Separate master bedroom, additional flat screen, wet bar and entertainment or dining great room, depending on room choice]]></copy>
+						<images>
+							<image id="pent1" url="rooms/pents/pent1.jpg" bytes="" />
+						</images>
+					</tab>
+				</tabs>			
+			</panel>
+		</rooms>
+		<lounge32>
+			<preload></preload>
+			<panel>
+				<headline><![CDATA[Think refueling station for the pampered and fabulous.]]></headline>
+				<copy><![CDATA[Food and drink are the staples of any great stay in Vegas. To be sure you’re never in short supply of either, HOTEL32’s private LOUNGE32 combines untouchable views of the Vegas skyline, evening cocktails, and complimentary refreshments throughout the day. Whether you’re popping in for a cup of coffee before your spa treatment, or lapping up a martini before you paint it all red, LOUNGE32 awaits you.<br><br>     7am-11pm Mon–Thurs, 7am-1am Fri-Sat<br>     Cocktail Hour 4pm-6pm<br>     Specialty cocktails and canapés<br>     Hot coffee, tea and breakfast daily]]></copy>
+				<images>
+					<image id="lounge1" url="lounge/lounge1.jpg" bytes="119985" />
+				</images>
+			</panel>
+			<!-- <panorama id="pano" url="lounge/lounge-pano-medium.jpg" bytes="670305" /> -->
+		</lounge32>
+		<spa-salon-fitness>
+			<preload>
+				<asset id="spa" url="images/spa.png" bytes="877479" xpos="86" ypos="0" />
+			</preload>
+		</spa-salon-fitness>
+		<food-and-drink>
+			<preload></preload>
+			<panel>
+				<headline><![CDATA[If you’re going to live like royalty, you should eat and drink in a manner befitting.]]></headline>
+				<copy><![CDATA[When it’s time to put down that scepter and eat, you deserve the finest. Look no farther than Andre’s, the ultimate in contemporary French from the rock-star-of-French-chefs Andre Rochat, served up in a sexy, elegant space that also boasts an upstairs cigar & cognac lounge and a wine list fit for a King. For your Porterhouse fix, dig in at Brand—a modern steakhouse with adjacent lounge for sipping and lingering. Or sample the Italian fare and Enomatic wine bar offerings at d.vino. Bon appetit, your majesty.]]></copy>
+				<images>
+					<image id="food1" url="food/food1.jpg" bytes="119985" />
+					<image id="casino1" url="casino/casino1.jpg" bytes="119985" />
+				</images>
+			</panel>
+		</food-and-drink>
+		<casino>
+			<preload></preload>
+			<panel>
+				<headline><![CDATA[If you’re here, luck is already <br>in your favor.]]></headline>
+				<copy><![CDATA[So the time has come to strut down to the casino and take your seat at the table. First stop is Hit, Monte Carlo’s upscale, high-stakes lounge where midi-baccarat, blackjack and single-zero roulette are the games of choice. Or test your skills on the felt of the Poker Room with a little Texas Hold ’Em. If Race and Sports Book is more your thing, you’ll find the dedicated lounge just the place to lay your bets. Whatever your game is, you’ll find what you came for.]]></copy>
+				<images>
+					<image id="casino1" url="casino/casino1.jpg" bytes="119985" />
+				</images>
+			</panel>
+		</casino>
+		<shopping>
+			<preload>
+				<asset id="shopping" url="images/shopping.png" bytes="846354" xpos="86" ypos="0" />
+			</preload>
+			<panel>
+				<tabs>
+					<tab id="DREAMS">
+						<headline><![CDATA[This alone is worth a trip to Vegas.]]></headline>
+						<copy><![CDATA[For all those must-have items you didn’t know you needed, welcome to Monte Carlo’s Street of Dreams. Peruse this shopping utopia for items such as designer shades to complete your poolside persona, a Juicy Couture hoody to keep your pampered self protected from evening breezes, or great gifts for all the people you came here to get away from.]]></copy>
+						<images>
+							<image id="dreams1" url="shopping/dreams1.jpg" bytes="119985" />
+						</images>
+					</tab>
+					<tab id="CRYSTALS">
+						<headline><![CDATA[Rodeo Drive, eat your heart out.]]></headline>
+						<copy><![CDATA[Crystals at CityCenter is the newest destination for the most lust-worthy elite and couture shopping in the world—all of which you can practically touch from here. Louis Vuitton, Cartier, Hermes, Prada, Miu Miu, Bulgari and Mikimoto are just a few of the stunning retail delights waiting to quench your desires. So strap on your shopping stilettos, because a short walk or complimentary tram will have you there in moments.]]></copy>
+						<images>
+							<image id="crystals1" url="shopping/crystals1.jpg" bytes="119985" />
+						</images>
+					</tab>
+				</tabs>
+			</panel>
+		</shopping>
+		<offers>
+			<preload>
+			</preload>
+		</offers>
+	</views>
+</config>

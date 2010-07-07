@@ -1,0 +1,199 @@
+﻿Main.swf Movie Report
+----------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    -----
+      1         294988         294988    Scene 1 (AS 3.0 Classes Export Frame)
+
+Scene      Shape Bytes    Text Bytes    ActionScript Bytes
+-------    -----------    ----------    ------------------
+Scene 1              0             0                164941
+
+Symbol                               Shape Bytes    Text Bytes    ActionScript Bytes
+---------------------------------    -----------    ----------    ------------------
+Amenity-Background                            36             0                     0
+Amenity-DetailBackground                       0             0                     0
+bgGradUpLeft                                  36             0                     0
+bgGradUpRight                                 32             0                     0
+bgGradDownLeft                                33             0                     0
+bgGradDownRight                               36             0                     0
+AmenityMask                                    0             0                     0
+maskClip                                       0             0                     0
+AmenityMask-Bottom                             0             0                     0
+AmenityMask-Left                               0             0                     0
+AmenityMask-Right                              0             0                     0
+AmenityMask-Top                                0             0                     0
+bottom-gradient-vector                         0             0                     0
+bottom-gradient-vector-tall                   72             0                     0
+bottomLeftStub                                 0             0                     0
+bottomRightStub                                0             0                     0
+gradient-top                                   0             0                     0
+topLeftStub                                    0             0                     0
+topRightStub                                   0             0                     0
+bmCopy                                         0           753                     0
+BookRoomAsset                                  0             0                     0
+BookRoomClip                                   0             0                     0
+shine                                         63             0                     0
+BrandMessageClip                              38             0                     0
+ReplayButton                                   0             0                     0
+caret                                         26             0                     0
+ComboBox                                       0             0                     0
+focusRectSkin                                 83             0                     0
+ComboBox_upSkin                                0             0                     0
+ComboBox_disabledSkin                        221             0                     0
+ComboBox_overSkin                              0             0                     0
+ComboBox_downSkin                            226             0                     0
+TextInput                                      0             0                     0
+List                                           0             0                     0
+Component_avatar                              27             0                     0
+CellRenderer                                   0             0                     0
+CellRenderer_disabledSkin                     76             0                     0
+CellRenderer_downSkin                         64             0                     0
+CellRenderer_overSkin                          0             0                     0
+CellRenderer_upSkin                           64             0                     0
+CellRenderer_selectedDisabledSkin             93             0                     0
+CellRenderer_selectedDownSkin                  0             0                     0
+CellRenderer_selectedOverSkin                106             0                     0
+CellRenderer_selectedUpSkin                   64             0                     0
+List_skin                                     83             0                     0
+ScrollBar                                      0             0                     0
+ScrollTrack_skin                              63             0                     0
+ScrollArrowUp_downSkin                        87             0                     0
+ScrollArrowDown_downSkin                      91             0                     0
+ScrollThumb_downSkin                         134             0                     0
+ScrollArrowDown_overSkin                      89             0                     0
+ScrollThumb_overSkin                         133             0                     0
+ScrollArrowUp_overSkin                        89             0                     0
+ScrollArrowUp_upSkin                           0             0                     0
+ScrollThumb_upSkin                           134             0                     0
+ScrollArrowDown_upSkin                        89             0                     0
+ScrollArrowDown_disabledSkin                   0             0                     0
+ScrollArrowUp_disabledSkin                    90             0                     0
+ScrollBar_thumbIcon                           61             0                     0
+ScrollArrowDown_icon                           0             0                     0
+arrowIcon                                     35             0                     0
+ScrollArrowUp_icon                             0             0                     0
+TextInput_disabledSkin                        83             0                     0
+TextInput_upSkin                              53             0                     0
+copyblock                                      0             0                     0
+copybox                                       43          1136                     0
+copyHolder                                     0            98                     0
+CalendarBackground                            59             0                     0
+CalendarBackgroundDoubleWide                  87             0                     0
+CheckRatesClip                                 0             0                     0
+CloseBox                                      70             0                     0
+embeds                                         0           312                     0
+fontEmbeds                                     0             0                     0
+fontEmbeds-knockout-only                       0             0                     0
+fontEmbedsWithArial                            0             0                     0
+image                                          0             0                     0
+logo                                           0             0                     0
+LegalCopyClip                                  0           239                     0
+phonenumber                                    0            66                     0
+composite                                      0             0                     0
+escalator                                    107             0                     0
+gridClip                                      32             0                     0
+gridmask                                       0             0                     0
+people                                      1465             0                     0
+peopleClip                                    87             0                     0
+peopleTextClip                                 0             0                     0
+peopleTextRed                                997             0                     0
+peopleTextWhite                                0             0                     0
+plane                                          0             0                     0
+planeClip                                      0             0                     0
+planeTextClip                                  0             0                     0
+planeTextRed                                1178             0                     0
+planeTextWhite                                 0             0                     0
+preloaderAsset                                 0             0                     0
+textmask                                       0             0                     0
+radial-gradient                               66             0                     0
+preloaderAsset backup                          0             0                     0
+redText                                        0             0                     0
+text source                                    0             0                     0
+Tween 1                                        0             0                     0
+Tween 2                                       24             0                     0
+whiteText                                      0             0                     0
+outPageLabel                                   0           115                     0
+overPageLabel                                  0           115                     0
+PageButtonClip                                 0             0                     0
+PageButtonLabel                                0             0                     0
+PageButtonSelectedClip                        24             0                     0
+PageButtonFrame                               33             0                     0
+borderClip                                   363             0                     0
+label                                          0             0                     0
+outTabTitle                                    0           119                     0
+overTabTitle                                   0           119                     0
+selected                                       0             0                     0
+shadow                                         0             0                     0
+TabbedBoxTab                                  24             0                     0
+TabbedBoxBackground                           87             0                     0
+TabPanel                                       0             0                     0
+Panel                                        114             0                     0
+roomsGridThumbClip                           102             0                     0
+RoomsBackground                               38             0                     0
+RoomsMask                                      0             0                     0
+RoomsMaskClip                                  0             0                     0
+RoomsMask-Bottom                               0             0                     0
+RoomsMask-Left                                 0             0                     0
+RoomsMask-Right                                0             0                     0
+RoomsMask-Top                                 26             0                     0
+nav_amenities                                  0             0                     0
+nav_casino                                     0             0                     0
+nav_food                                       0             0                     0
+nav_lounge                                     0             0                     0
+nav_rooms                                      0             0                     0
+nav_shopping                                   0             0                     0
+nav_spa                                        0             0                     0
+outAmenities                                   0            43                     0
+outCasino                                      0             0                     0
+outFood                                        0            57                     0
+outLounge                                      0            44                     0
+outRooms                                       0            38                     0
+outShopping                                    0            41                     0
+outSpa                                         0            53                     0
+overAmenities                                  0            43                     0
+overCasino                                     0            39                     0
+overFood                                       0            57                     0
+overLounge                                     0            44                     0
+overRooms                                      0            38                     0
+overShopping                                   0            41                     0
+overSpa                                        0            53                     0
+nav_amenities                                  0             0                     0
+outAmenities                                   0            43                     0
+overAmenities                                  0            43                     0
+topNavClip                                     0             0                     0
+topNavClip2                                    0             0                     0
+fl.core.ComponentShim                          0             0                     0
+fl.controls.Button                             0             0                     0
+
+Font Name            Bytes         Characters
+-----------------    ----------    ----------
+FuturaStd-Medium            701    .235678
+FuturaStd-Book             6474     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+FuturaStd-Light            3141     ,.23:?ABDEHILNOPRSTVWYabcdefghijklmnoprstuvwxy’
+FuturaT-Medi               7685     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ˆ˜–—‘’‚“”„†‡•…‰‹›™
+Arial-BoldMT Bold          8442     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ˆ˜–—‘’‚“”„†‡•…‰‹›€™
+ArialMT                    8845     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~©ˆ˜–—‘’‚“”„†‡•…‰‹›€™
+
+ActionScript Bytes    Location
+------------------    --------
+            164941    Scene 1:Frame 1
+
+Bitmap                    Compressed    Original      Compression
+----------------------    ----------    ----------    -----------
+tab-bg                           305         12728    JPEG Quality=80
+tab-selected-bg                  310         12728    JPEG Quality=80
+logo-background-bitmap          2632         76384    Lossless
+casino                         65128       1620160    JPEG Quality=80
+check-rates-bitmap              1856         15428    Lossless
+Bitmap 8                         997         13920    Lossless
+topRightStub-bitmap              171           392    Lossless
+topLeftStub-bitmap               115           392    Lossless
+gradient-top-bitmap             2907        468048    JPEG Quality=90
+bottomRightStub-bitmap            49           452    Lossless
+bottomLeftStub-bitmap             59           452    Lossless
+plane bitmap                    2046         69056    JPEG Quality=80
+
+
+
+

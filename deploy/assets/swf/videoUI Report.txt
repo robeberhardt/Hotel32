@@ -1,0 +1,59 @@
+﻿videoUI.swf Movie Report
+-------------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    -----
+      1           7646           7646    Scene 1 (AS 3.0 Classes Export Frame)
+
+Scene      Shape Bytes    Text Bytes    ActionScript Bytes
+-------    -----------    ----------    ------------------
+Scene 1              0             0                   887
+
+Symbol                  Shape Bytes    Text Bytes    ActionScript Bytes
+--------------------    -----------    ----------    ------------------
+caret                            43             0                     0
+waves                            53             0                     0
+sliderHotspot                     0             0                     0
+track                            37             0                     0
+dot                               0             0                     0
+tag_cta_clip                     93             0                     0
+coverClip                        37             0                     0
+scrubberClip                     43             0                     0
+trackClip                      2362             0                     0
+bufferClip                       24             0                     0
+playheadClip                     24             0                     0
+clicktrackClip                    0             0                     0
+videoTourCTA_bg                   0             0                     0
+videoTourCTA                     36            48                     0
+videoReplay                      40            49                     0
+cuepoint_dot                     32             0                     0
+cuepoint_ring                    44             0                     0
+cuepoint                         39             0                     0
+playpause                       113             0                     0
+muteButton                      108             0                     0
+playPauseButton                   0             0                     0
+playPauseControl_new              0             0                     0
+ring                            105             0                     0
+glow                             48             0                     0
+glow_anim                         0             0                     0
+glow_mc                           0             0                     0
+throbby                           0             0                     0
+cpTagFill                        30             0                     0
+cpTagClip                        20           117                     0
+cpTagClipLarge                    0             0                     0
+cpTagClipRevised                109           447                     0
+volumeSlider_mask                21             0                     0
+volumeSlider_thumb               98             0                     0
+volumeSlider                     42             0                     0
+
+Font Name                  Bytes         Characters
+-----------------------    ----------    ----------
+Knockout-33JuniorHeviwt          1150     ACDEHILNOPRSTUVWXYZ
+
+ActionScript Bytes    Location
+------------------    --------
+               887    Scene 1:Frame 1
+
+
+
+
