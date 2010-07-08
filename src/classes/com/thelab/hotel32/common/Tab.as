@@ -19,7 +19,7 @@ package com.thelab.hotel32.common
 	import org.osflash.signals.natives.NativeSignal;
 	
 	// Library Symbols
-	import com.thelab.hotel32.assets.TabAsset;
+	import com.thelab.hotel32.assets.TabSingleAsset;
 	
 	public class Tab extends Sprite
 	{
@@ -55,7 +55,7 @@ package com.thelab.hotel32.common
 			
 			mouseChildren = false;
 			
-			asset = new TabAsset();
+			asset = new TabSingleAsset();
 			addChild(asset);
 			
 			over = asset.label.over;
@@ -120,6 +120,10 @@ package com.thelab.hotel32.common
 			hilite(_selected);
 			if (_selected)
 			{
+				asset.borderTop.visible = true;
+				asset.borderBottom.visible = false;
+				asset.borderLeft.visible = true;
+				asset.borderRight.visible = true;
 				
 				rolledOver.remove(doRolledOver);
 				rolledOut.remove(doRolledOut);
@@ -131,6 +135,11 @@ package com.thelab.hotel32.common
 			}
 			else
 			{
+				asset.borderTop.visible = false;
+				asset.borderBottom.visible = true;
+				asset.borderLeft.visible = false;
+				asset.borderRight.visible = false;
+				
 				rolledOver.add(doRolledOver);
 				rolledOut.add(doRolledOut);
 				clicked.add(doClicked);

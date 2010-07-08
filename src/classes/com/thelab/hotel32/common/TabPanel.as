@@ -2,7 +2,6 @@ package com.thelab.hotel32.common
 {
 	import com.greensock.TweenMax;
 	import com.greensock.easing.Circ;
-	import com.thelab.hotel32.assets.TabBorderAsset;
 	import com.thelab.hotel32.assets.TabPanelAsset;
 	import com.thelab.hotel32.common.Tab;
 	import com.thelab.hotel32.helpers.BasicButton;
@@ -32,7 +31,6 @@ package com.thelab.hotel32.common
 		private var asset							: MovieClip;
 
 		public var paginator						: Paginator;
-		private var border							: MovieClip;
 		
 		private var copyHolder						: Sprite;
 		private var headline						: PanelHeadline;
@@ -45,7 +43,6 @@ package com.thelab.hotel32.common
 			this.name = name;
 			this.pageData = pageXML..tabs;
 			
-			Logger.log("there are " + pageData..tab.length() + " tabs");
 			tabArray = new Array();
 			visible = false;
 			alpha = 0;
@@ -65,11 +62,10 @@ package com.thelab.hotel32.common
 			
 			asset = new TabPanelAsset();
 			addChild(asset);
-//			headlineCopy = asset.copyHolder.headline;
-//			bodyCopy = asset.copyHolder.body;
 			
 			copyHolder = new Sprite();
 			addChild(copyHolder);
+			copyHolder.visible = false;
 			
 			headline = new PanelHeadline();
 			copyHolder.addChild(headline);
@@ -83,7 +79,6 @@ package com.thelab.hotel32.common
 			
 			for (var i:int=0; i<pageData..tab.length(); i++)
 			{
-				Logger.log("creating tab " + i, 5);
 				var tab:Tab = new Tab(pageData..tab[i].@id.toString());
 				tab.index = i+1;
 				tab.x = i*86 + i;
@@ -91,18 +86,7 @@ package com.thelab.hotel32.common
 				tabArray.push(tab);
 				tab.clickedSender.add(onTabClicked);
 			}
-			
-			
-			border = new TabBorderAsset();
-			border.gotoAndStop(1);
-			addChild(border);
-			
-			
-//			headlineCopy.background = false;
-//			headlineCopy.border = false;
-//			bodyCopy.background = false;
-//			bodyCopy.border = false;
-			
+									
 			thumbButton = new RoomsGridThumbButton("thumb");
 			thumbButton.x = 38;
 			thumbButton.y = 350;
@@ -120,19 +104,23 @@ package com.thelab.hotel32.common
 		
 		private function onThumbButtonClicked(which:BasicButton):void
 		{
-			//Logger.log("YOU CLICKED THE THUMB");
 			thumbSender.dispatch();
+		}
+		
+		public function selectByIndex(val:uint):void
+		{
+			var tab:Tab = tabArray[val] as Tab;
+			Logger.log("selecting tab by index: " + tab);
+			selectedTab = tab;
 		}
 		
 		public function selectByName(val:String):void
 		{
-			//Logger.log("\nselectByName: " + val, 3);
 			for (var i:uint = 0; i<tabArray.length; i++)
 			{
 				var tab:Tab = tabArray[i] as Tab;
 				if (tab.name == val)
 				{
-					Logger.log("selectByName: selecting " + tab, 4);
 					selectedTab = tab;
 				}
 			}
@@ -140,12 +128,7 @@ package com.thelab.hotel32.common
 		
 		public function refreshContent():void
 		{
-//			Logger.log("pageCount: " + pageData..tab[selectedTab.index-1]..images.image.length());
-//			paginator.count = uint(pageData..tab[selectedTab.index-1]..images.image.length());
-			Logger.log("REFRESHING CONTENT");
-//			headlineCopy.htmlText = Utils.stringToHTML( pageData..tab[selectedTab.index-1]..headline.toString() );
-//			bodyCopy.htmlText = Utils.stringToHTML( pageData..tab[selectedTab.index-1]..copy.toString() );
-			
+			copyHolder.visible = true;
 			headline.text = Utils.stringToHTML( pageData..tab[selectedTab.index-1]..headline.toString() );
 			body.text = Utils.stringToHTML( pageData..tab[selectedTab.index-1]..copy.toString() );
 			
@@ -154,10 +137,6 @@ package com.thelab.hotel32.common
 			
 		}
 		
-//		public function showCopyHolder():void
-//		{
-//			TweenMax.to(box.copyHolder, .4, { autoAlpha: 1 } );
-//		}
 		
 		public function onTabClicked(which:Tab):void
 		{
@@ -183,7 +162,6 @@ package com.thelab.hotel32.common
 			}
 			_selectedTab = val;
 			_selectedTab.selected = true;
-			if (border) { border.gotoAndStop(val.index); }
 			selectedSender.dispatch(val); 
 			paginator.count = uint(pageData..tab[selectedTab.index-1]..images.image.length());
 		}

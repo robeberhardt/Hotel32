@@ -236,9 +236,32 @@
 			<!-- <panorama id="pano" url="lounge/lounge-pano-medium.jpg" bytes="670305" /> -->
 		</lounge32>
 		<spa-salon-fitness>
-			<preload>
-				<asset id="spa" url="images/spa.png" bytes="877479" xpos="86" ypos="0" />
-			</preload>
+			<preload></preload>
+			<panel>
+				<tabs>
+					<tab id="SPA">
+						<headline><![CDATA[The perfect way to ease into life below the 32nd floor.]]></headline>
+						<copy><![CDATA[A short elevator decent to the luxurious spa downstairs is the ultimate way to recover from all that VIP treatment. Try an H2Glo Oxygen Facial or Green Tea Elixir Body Wrap as the perfect antidote to last night’s festivities. For the boys, we suggest a Deep Tissue Massage, Blissful Back Treatment or Gentleman’s Facial. Touch the Spa icon on your Mobile Concierge for appointments, and they’ll have you relaxed, refreshed and ready to get back upstairs in no time.]]></copy>
+						<images>
+							<image id="spa1" url="spa/spa1.jpg" bytes="138408" />
+						</images>
+					</tab>
+					<tab id="SALON">
+					<headline><![CDATA[If you’re going to be celebrated, make sure you look the part.]]></headline>
+					<copy><![CDATA[Keep up appearances during your HOTEL32 stay at the salon, where talented stylists and estheticians  are standing by to do their thing. Hairstyling, color, makeup, waxing, manicures and pedicures are among the services offered to ensure you’re sufficiently styled, plucked and preened into a state of utter magnificence. Simply touch the Salon icon on your Mobile Concierge for an appointment, and get ready for your close up.]]></copy>
+						<images>
+							<image id="salon1" url="spa/salon1.jpg" bytes="138408" />
+						</images>
+					</tab>
+					<tab id="FITNESS">
+						<headline><![CDATA[Because upstairs, they won’t let you lift so much as a finger.]]></headline>
+						<copy><![CDATA[A person can only take so much pampering before the urge may strike to do a little heavy lifting on your own. For this reason, the Fitness Center is available for a satisfying workout. State-of-the-art equipment includes Matrix treadmills, X bikes and ellipticals, a Nautilus Strengthline, Stairmasters, a Cybex Power Cage, free weights and more to keep you in shape for the decadent lifestyle upstairs. Aprés workout, the sauna, steam room and whirlpools are also at your disposal.]]></copy>
+						<images>
+							<image id="fitness1" url="spa/fitness1.jpg" bytes="138408" />
+						</images>
+					</tab>
+				</tabs>			
+			</panel>
 		</spa-salon-fitness>
 		<food-and-drink>
 			<preload></preload>
