@@ -4,7 +4,7 @@ package com.thelab.hotel32.views
 	import com.thelab.hotel32.assets.AssetLoader;
 	import com.thelab.hotel32.assets.fonts.FontLibrary;
 	import com.thelab.hotel32.common.PageButton;
-	import com.thelab.hotel32.common.SimpleBackgroundLoader;
+	import com.thelab.hotel32.common.BackgroundLoader;
 	import com.thelab.hotel32.common.TabPanel;
 	import com.thelab.hotel32.helpers.BasicTextField;
 	
@@ -15,7 +15,7 @@ package com.thelab.hotel32.views
 	{
 		
 		private var tabPanel								: TabPanel;
-		private var bgLoader								: SimpleBackgroundLoader;
+		private var bgLoader								: BackgroundLoader;
 		
 		public function SpaView(name:String=null)
 		{
@@ -44,7 +44,7 @@ package com.thelab.hotel32.views
 			
 			tabPanel.visible = false;
 						
-			bgLoader = new SimpleBackgroundLoader(pageXML);
+			bgLoader = new BackgroundLoader(pageXML);
 			addChildAt(bgLoader, 0);
 			bgLoader.transitionMiddle.add( function() { tabPanel.refreshContent(); } );
 			bgLoader.show();

@@ -3,7 +3,7 @@ package com.thelab.hotel32.views.lounge
 	import com.thelab.hotel32.CasinoImage;
 	import com.thelab.hotel32.common.PageButton;
 	import com.thelab.hotel32.common.Panel;
-	import com.thelab.hotel32.common.SimpleBackgroundLoader;
+	import com.thelab.hotel32.common.BackgroundLoader;
 	import com.thelab.hotel32.helpers.Logger;
 	import com.thelab.hotel32.temp.CopyBox;
 	import com.thelab.hotel32.views.BasicView;
@@ -11,7 +11,7 @@ package com.thelab.hotel32.views.lounge
 	public class LoungeView extends BasicView
 	{
 		private var panel								: Panel;
-		private var bgLoader							: SimpleBackgroundLoader;
+		private var bgLoader							: BackgroundLoader;
 		
 //		private var pano								: Panorama;
 		
@@ -25,7 +25,7 @@ package com.thelab.hotel32.views.lounge
 			transitionStarted.add(onTransStart);
 			transitionFinished.add(onTransEnd);
 			
-			bgLoader = new SimpleBackgroundLoader(pageXML..images);
+			bgLoader = new BackgroundLoader(pageXML..images);
 			addChild(bgLoader);
 			bgLoader.show();
 			

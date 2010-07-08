@@ -18,7 +18,7 @@ package com.thelab.hotel32.common
 	public class BackgroundLoader extends Sprite
 	{
 		
-		private var pageXML									: XMLList;
+		private var pageData								: XMLList;
 		private var queue									: LoaderMax;
 		private var holderA									: Sprite;
 		private var holderB									: Sprite;
@@ -36,9 +36,10 @@ package com.thelab.hotel32.common
 		public static const TRANSITION_OUT					: String = "TRANSITION_OUT";
 		
 		
-		public function BackgroundLoader(pageXML:XMLList)
+		public function BackgroundLoader(data:XMLList)
 		{
-			this.pageXML = pageXML;
+			pageData = data;
+			Logger.log(this + " pageData = " + pageData);
 			
 			transitionStarted = new Signal();
 			transitionMiddle = new Signal();
@@ -56,38 +57,33 @@ package com.thelab.hotel32.common
 			holderA.visible = false;
 			holderA.alpha = 0;
 			addChild(holderA);
-						
+			
 			holderB = new Sprite();
 			holderB.visible = false;
 			holderB.alpha = 0;
 			addChild(holderB);
-						
+			
 			currentHolder = holderA;
-						
+			
 			queue = new LoaderMax( { name:"roomsBackground_loader" } );
 			
-			for (var i:int = 0; i < pageXML..tabs..tab.length(); i++)
+			Logger.log("there are " + pageData..image.length() + " images.");
+			for  (var i:int = 0; i < pageData..image.length(); i++)
 			{
-				var tabQueue:LoaderMax = new LoaderMax( { name: pageXML..tabs..tab[i].@id.toString(), onComplete:bgLoadComplete, onError:bgLoadError } );
+				var image:XML = pageData..image[i];
+				Logger.log("image = " + image);
+				var url: String = AssetController.getInstance().basePath + image.@url.toString();
 				
-				for each (var image:XML in pageXML..tabs..tab[i]..image)
-				{
-					var url : String = AssetController.getInstance().basePath + image.@url.toString();
-					
-					var params:Object = new Object();
-//					params.onProgress = progressHandler;
-					params.onComplete = bgLoadComplete;
-					params.onError = bgLoadError;
-					params.name = image.@id.toString();
-					params.estimatedBytes = Number(image.@bytes);
-					
-					tabQueue.append( new ImageLoader (url, params));					
-				}
+				Logger.log(this + " -- " + image);
+				var params:Object = new Object();
+				params.name = image.@id.toString();
+				params.onComplete = bgLoadComplete;
+				params.onError = bgLoadError;
+				params.estimatedBytes = Number(image.@bytes);
 				
-				queue.append(tabQueue);				
-			}
-			
-			
+				Logger.log("appending loader " + params.name);
+				queue.append(new ImageLoader(url, params));
+			}	
 		}
 		
 		public function getQueue(id:String):LoaderMax
@@ -95,12 +91,11 @@ package com.thelab.hotel32.common
 			return queue.getLoader(id) as LoaderMax;
 		}
 		
-		public function load(tab:String, url:String):void
+		public function load(name:String):void
 		{
-			Logger.log("LOADING " + url + " from tab " + tab);
+			Logger.log("LOADING " + name);
 			readyForTransitionIn = false;
-			var theTabQueue:LoaderMax = queue.getLoader(tab) as LoaderMax;
-			theLoader = theTabQueue.getLoader(url) as ImageLoader;
+			theLoader = queue.getLoader(name) as ImageLoader;
 			theLoader.load();
 			transitionOut();
 		}
@@ -170,6 +165,11 @@ package com.thelab.hotel32.common
 		public function show():void
 		{
 			TweenMax.to(this, .25, { autoAlpha: 1 } );
+		}
+		
+		override public function toString():String
+		{
+			return "[SimpleBackgroundLoader id: " + name + "]";
 		}
 	}
 }

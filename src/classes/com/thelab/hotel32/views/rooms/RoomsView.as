@@ -4,7 +4,6 @@ package com.thelab.hotel32.views.rooms
 	import com.thelab.hotel32.assets.AssetController;
 	import com.thelab.hotel32.common.BackgroundLoader;
 	import com.thelab.hotel32.common.PageButton;
-	import com.thelab.hotel32.common.TabPanel;
 	import com.thelab.hotel32.common.Tab;
 	import com.thelab.hotel32.helpers.Logger;
 	import com.thelab.hotel32.views.BasicView;
@@ -18,7 +17,7 @@ package com.thelab.hotel32.views.rooms
 	{
 		private var boxArray								: Array;
 		private var boxgrid									: RoomsBoxGrid;
-		private var tabPanel								: TabPanel;
+		private var tabPanel								: RoomsTabPanel;
 		private var bgLoader								: BackgroundLoader;
 				
 		public function RoomsView(name:String=null)
@@ -117,7 +116,7 @@ package com.thelab.hotel32.views.rooms
 		
 		private function makeTabBox():void
 		{
-			tabPanel = new TabPanel("roomsTabbedBox", pageXML);
+			tabPanel = new RoomsTabPanel("roomsTabbedBox", pageXML);
 			addChild(tabPanel);
 			
 			tabPanel.paginatorReady.addOnce( function()
@@ -143,14 +142,9 @@ package com.thelab.hotel32.views.rooms
 		
 		private function onPageSelected(which:PageButton):void
 		{
-			var selectedTabName:String = TabPanel(which.parent.parent).selectedTab.name;
-			Logger.log("selectedTabName: " + selectedTabName);
-			
+			var selectedTabName:String = RoomsTabPanel(which.parent.parent).selectedTab.name;			
 			var theURL:String = pageXML..tab.(@id == selectedTabName).images.image[which.index-1].@id.toString();
-			
-			bgLoader.load(selectedTabName, theURL);
-			
-			//tabBox.hideCopy();
+			bgLoader.load(theURL);
 		}
 		
 		/* ----------------------------------------------------------------------------------------

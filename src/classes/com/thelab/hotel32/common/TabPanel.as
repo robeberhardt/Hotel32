@@ -26,7 +26,6 @@ package com.thelab.hotel32.common
 		
 		public var paginatorReady					: Signal;
 		public var selectedSender					: Signal;
-		public var thumbSender						: Signal;
 		
 		private var asset							: MovieClip;
 
@@ -35,8 +34,6 @@ package com.thelab.hotel32.common
 		private var copyHolder						: Sprite;
 		private var headline						: PanelHeadline;
 		private var body							: PanelCopy;
-		
-		private var thumbButton						: RoomsGridThumbButton;
 		
 		public function TabPanel(name:String, pageXML:XMLList)
 		{
@@ -50,7 +47,6 @@ package com.thelab.hotel32.common
 			y = 56;
 			
 			paginatorReady = new Signal();
-			thumbSender = new Signal();
 			selectedSender = new Signal();
 			
 			if (stage) { init(); } else { addEventListener(Event.ADDED_TO_STAGE, init); }
@@ -87,11 +83,11 @@ package com.thelab.hotel32.common
 				tab.clickedSender.add(onTabClicked);
 			}
 									
-			thumbButton = new RoomsGridThumbButton("thumb");
-			thumbButton.x = 38;
-			thumbButton.y = 350;
-			thumbButton.clickedSender.add(onThumbButtonClicked);
-			addChild(thumbButton);
+//			thumbButton = new RoomsGridThumbButton("thumb");
+//			thumbButton.x = 38;
+//			thumbButton.y = 350;
+//			thumbButton.clickedSender.add(onThumbButtonClicked);
+//			addChild(thumbButton);
 			
 			paginator = new Paginator(this.name + "-Paginator");
 			addChild(paginator);
@@ -100,12 +96,19 @@ package com.thelab.hotel32.common
 			
 			paginatorReady.dispatch();
 			
+			setup();
+			
 		}
 		
-		private function onThumbButtonClicked(which:BasicButton):void
+		public function setup():void
 		{
-			thumbSender.dispatch();
+			//
 		}
+		
+//		private function onThumbButtonClicked(which:BasicButton):void
+//		{
+//			thumbSender.dispatch();
+//		}
 		
 		public function selectByIndex(val:uint):void
 		{

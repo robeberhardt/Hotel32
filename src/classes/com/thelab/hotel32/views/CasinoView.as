@@ -3,14 +3,14 @@ package com.thelab.hotel32.views
 	import com.thelab.hotel32.CasinoImage;
 	import com.thelab.hotel32.common.PageButton;
 	import com.thelab.hotel32.common.Panel;
-	import com.thelab.hotel32.common.SimpleBackgroundLoader;
+	import com.thelab.hotel32.common.BackgroundLoader;
 	import com.thelab.hotel32.helpers.Logger;
 	import com.thelab.hotel32.temp.CopyBox;
 	
 	public class CasinoView extends BasicView
 	{
 		private var panel								: Panel;
-		private var bgLoader							: SimpleBackgroundLoader;
+		private var bgLoader							: BackgroundLoader;
 		
 		public function CasinoView(name:String=null)
 		{
@@ -22,7 +22,7 @@ package com.thelab.hotel32.views
 			transitionStarted.add(onTransStart);
 			transitionFinished.add(onTransEnd);
 			
-			bgLoader = new SimpleBackgroundLoader(pageXML..images);
+			bgLoader = new BackgroundLoader(pageXML..images);
 			addChild(bgLoader);
 			bgLoader.show();
 			
