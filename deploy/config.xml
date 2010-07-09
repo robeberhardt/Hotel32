@@ -233,7 +233,10 @@
 					<image id="lounge1" url="lounge/lounge1.jpg" bytes="119985" />
 				</images>
 			</panel>
-			<!-- <panorama id="pano" url="lounge/lounge-pano-medium.jpg" bytes="670305" /> -->
+			<panorama>
+				<panoimage id="pano" url="lounge/lounge-pano-medium.jpg" bytes="670305" />
+				<tip text="CHECK OUT VIEW" />
+			</panorama>
 		</lounge32>
 		<spa-salon-fitness>
 			<preload></preload>
@@ -294,14 +297,14 @@
 						<headline><![CDATA[This alone is worth a trip to Vegas.]]></headline>
 						<copy><![CDATA[For all those must-have items you didn’t know you needed, welcome to Monte Carlo’s Street of Dreams. Peruse this shopping utopia for items such as designer shades to complete your poolside persona, a Juicy Couture hoody to keep your pampered self protected from evening breezes, or great gifts for all the people you came here to get away from.]]></copy>
 						<images>
-							<image id="dreams1" url="shopping/dreams1.jpg" bytes="119985" />
+							<image id="dreams1" url="shopping/shopping1.jpg" bytes="119985" />
 						</images>
 					</tab>
 					<tab id="CRYSTALS">
 						<headline><![CDATA[Rodeo Drive, eat your heart out.]]></headline>
 						<copy><![CDATA[Crystals at CityCenter is the newest destination for the most lust-worthy elite and couture shopping in the world—all of which you can practically touch from here. Louis Vuitton, Cartier, Hermes, Prada, Miu Miu, Bulgari and Mikimoto are just a few of the stunning retail delights waiting to quench your desires. So strap on your shopping stilettos, because a short walk or complimentary tram will have you there in moments.]]></copy>
 						<images>
-							<image id="crystals1" url="shopping/crystals1.jpg" bytes="119985" />
+							<image id="crystals1" url="shopping/shopping2.jpg" bytes="119985" />
 						</images>
 					</tab>
 				</tabs>

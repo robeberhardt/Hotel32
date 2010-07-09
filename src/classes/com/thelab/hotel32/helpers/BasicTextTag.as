@@ -1,6 +1,6 @@
 package com.thelab.hotel32.helpers
 {
-	import com.thelab.hotel32.Caret;
+	
 	import com.thelab.hotel32.assets.fonts.FontLibrary;
 	
 	import flash.display.MovieClip;
@@ -14,7 +14,6 @@ package com.thelab.hotel32.helpers
 	
 	public class BasicTextTag extends Sprite
 	{
-//		private var caret									: MovieClip;
 		private var labelField								: TextField;
 		private var labelFormat								: TextFormat;
 		private var labelWidth								: Number;
@@ -33,16 +32,11 @@ package com.thelab.hotel32.helpers
 			labelField.antiAliasType = AntiAliasType.ADVANCED;
 			labelField.autoSize = TextFieldAutoSize.LEFT;
 			labelField.embedFonts = true;
-//			labelField.defaultTextFormat = labelFormat;
 			labelField.selectable = false;
 			
 			labelField.text = s.toUpperCase();
 			labelField.setTextFormat(labelFormat);
-		
-//			caret = new Caret();
-//			caret.y = 10;
-//			caret.x = labelField.width + 5;
-			
+					
 			if (stage) { init(); } else { addEventListener(Event.ADDED_TO_STAGE, init); }
 		}
 		
@@ -51,7 +45,6 @@ package com.thelab.hotel32.helpers
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
 			addChild(labelField);
-//			addChild(caret);
 			
 		}
 		
@@ -59,14 +52,12 @@ package com.thelab.hotel32.helpers
 		{
 			labelFormat.size = val;
 			labelField.setTextFormat(labelFormat);
-//			caret.x = labelField.width + 5;
 		}
 		
 		public function set text(s:String):void
 		{
 			labelField.text = s.toUpperCase();
 			labelField.setTextFormat(labelFormat);
-//			caret.x = labelField.width + 5;
 		}
 	}
 }

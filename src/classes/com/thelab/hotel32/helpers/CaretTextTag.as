@@ -1,6 +1,5 @@
 package com.thelab.hotel32.helpers
 {
-	import com.thelab.hotel32.Caret;
 	import com.thelab.hotel32.assets.fonts.FontLibrary;
 	
 	import flash.display.MovieClip;
@@ -11,6 +10,9 @@ package com.thelab.hotel32.helpers
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
+	
+	// Library Symbols
+	import com.thelab.hotel32.assets.CaretAsset;
 	
 	public class CaretTextTag extends Sprite
 	{
@@ -33,13 +35,12 @@ package com.thelab.hotel32.helpers
 			labelField.antiAliasType = AntiAliasType.ADVANCED;
 			labelField.autoSize = TextFieldAutoSize.LEFT;
 			labelField.embedFonts = true;
-			//			labelField.defaultTextFormat = labelFormat;
 			labelField.selectable = false;
 			
 			labelField.text = s.toUpperCase();
 			labelField.setTextFormat(labelFormat);
 			
-			caret = new Caret();
+			caret = new CaretAsset();
 			caret.y = 10;
 			caret.x = labelField.width + 5;
 			

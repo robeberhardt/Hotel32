@@ -7,7 +7,7 @@ package com.thelab.hotel32.booking
 	import com.thelab.hotel32.assets.fonts.FontLibrary;
 	import com.thelab.hotel32.helpers.BasicButton;
 	import com.thelab.hotel32.helpers.BasicTextTag;
-	import com.thelab.hotel32.helpers.CloseX;
+	import com.thelab.hotel32.common.CloseX;
 	import com.thelab.hotel32.helpers.Logger;
 	import com.thelab.hotel32.views.AppStage;
 	import com.thelab.hotel32.views.ViewController;
