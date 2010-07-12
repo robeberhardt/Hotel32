@@ -33,6 +33,7 @@ package com.thelab.hotel32.views.lounge
 		
 		public var ready							: Signal;
 		public var closed							: Signal;
+		public var progress							: Signal;
 		
 		private var asset							: MovieClip;
 		private var image							: ContentDisplay;
@@ -55,6 +56,7 @@ package com.thelab.hotel32.views.lounge
 			panoData = data;
 			ready = new Signal();
 			closed = new Signal();
+			progress = new Signal(Number);
 			queue = new LoaderMax();
 			
 			
@@ -75,6 +77,7 @@ package com.thelab.hotel32.views.lounge
 			var url:String = AssetController.getInstance().basePath + panoData..panoimage.@url.toString();
 			var params:Object = new Object();
 			params.name = panoData..panoimage.@id.toString();
+			params.onProgress = loadProgress;
 			params.onComplete = loadComplete;
 			params.onError = loadError;
 			
@@ -100,6 +103,11 @@ package com.thelab.hotel32.views.lounge
 			image.x = center.x - Math.floor(image.width * .5);
 			image.y = center.y - Math.floor(image.height * .5);
 			active = true;
+		}
+		
+		private function loadProgress(e:LoaderEvent):void
+		{
+			progress.dispatch(ImageLoader(e.target).bytesLoaded / ImageLoader(e.target).bytesTotal);
 		}
 		
 		private function loadComplete(e:LoaderEvent):void
@@ -228,6 +236,11 @@ package com.thelab.hotel32.views.lounge
 			
 			
 //			Logger.log(image.x + " : " + image.y);
+		}
+		
+		public function get status():int
+		{
+			return loader.status;
 		}
 		
 		public function show():void

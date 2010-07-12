@@ -2,7 +2,7 @@ package com.thelab.hotel32.common
 {
 	import com.greensock.TweenMax;
 	import com.thelab.hotel32.assets.CaretAsset;
-	import com.thelab.hotel32.assets.ToolTipAsset;
+
 	import com.thelab.hotel32.assets.fonts.FontLibrary;
 	
 	import flash.display.MovieClip;
@@ -18,14 +18,18 @@ package com.thelab.hotel32.common
 	import org.osflash.signals.Signal;
 	import org.osflash.signals.natives.NativeSignal;
 	
+	// Library imports
+	import com.thelab.hotel32.assets.ToolTipAsset;
+	
 	public class ToolTip extends Sprite
 	{
 		private var over									: NativeSignal;
 		private var out										: NativeSignal;
 		private var clicked									: NativeSignal;
+		public var ready									: Signal;
 		public var clickedSender							: Signal;
 		
-		private var asset									: MovieClip;
+		public var asset									: MovieClip;
 		private var caret									: MovieClip;
 		
 		private var format									: TextFormat;
@@ -40,6 +44,7 @@ package com.thelab.hotel32.common
 			over = new NativeSignal(this, MouseEvent.ROLL_OVER, MouseEvent);
 			out = new NativeSignal(this, MouseEvent.ROLL_OUT, MouseEvent);
 			clicked = new NativeSignal(this, MouseEvent.CLICK, MouseEvent);
+			ready = new Signal();
 			clickedSender = new Signal();
 			_text = text;
 			
@@ -80,6 +85,13 @@ package com.thelab.hotel32.common
 			caret.y = -25;
 			
 			text = _text;
+			
+			setup();
+		}
+		
+		public function setup():void
+		{
+			ready.dispatch();
 		}
 		
 		private function onClicked(e:MouseEvent):void
@@ -120,9 +132,9 @@ package com.thelab.hotel32.common
 			caret.x = Math.round(field.width * .5) + 1;
 		}
 		
-		public function show():void
+		public function show(d:Number=0):void
 		{
-			TweenMax.to(this, .25, { autoAlpha: 1 });
+			TweenMax.to(this, .25, { delay: d, autoAlpha: 1 });
 			active = true;
 		}
 		
