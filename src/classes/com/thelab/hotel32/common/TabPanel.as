@@ -3,7 +3,7 @@ package com.thelab.hotel32.common
 	import com.greensock.TweenMax;
 	import com.greensock.easing.Circ;
 	import com.thelab.hotel32.assets.TabPanelAsset;
-	import com.thelab.hotel32.common.Tab;
+	import com.thelab.hotel32.common.NewTab;
 	import com.thelab.hotel32.helpers.BasicButton;
 	import com.thelab.hotel32.helpers.Logger;
 	import com.thelab.hotel32.tabbox.PageButtonClip;
@@ -22,7 +22,7 @@ package com.thelab.hotel32.common
 	{
 		private var pageData						: XMLList;
 		private var tabArray						: Array;
-		private var _selectedTab					: Tab;
+		private var _selectedTab					: NewTab;
 		
 		public var paginatorReady					: Signal;
 		public var selectedSender					: Signal;
@@ -75,9 +75,19 @@ package com.thelab.hotel32.common
 			
 			for (var i:int=0; i<pageData..tab.length(); i++)
 			{
-				var tab:Tab = new Tab(pageData..tab[i].@id.toString());
+				var tab:NewTab = new NewTab(pageData..tab[i].@id.toString());
 				tab.index = i+1;
-				tab.x = i*86 + i;
+				
+				if (i == 0)
+				{
+					tab.x = 0;
+				}
+				else
+				{
+					tab.x = tabArray[i-1].x + tabArray[i-1].tabWidth + 1;
+				}
+				
+//				tab.x = i*86 + i;
 				addChild(tab);
 				tabArray.push(tab);
 				tab.clickedSender.add(onTabClicked);
@@ -112,7 +122,7 @@ package com.thelab.hotel32.common
 		
 		public function selectByIndex(val:uint):void
 		{
-			var tab:Tab = tabArray[val] as Tab;
+			var tab:NewTab = tabArray[val] as NewTab;
 			Logger.log("selecting tab by index: " + tab);
 			selectedTab = tab;
 		}
@@ -121,7 +131,7 @@ package com.thelab.hotel32.common
 		{
 			for (var i:uint = 0; i<tabArray.length; i++)
 			{
-				var tab:Tab = tabArray[i] as Tab;
+				var tab:NewTab = tabArray[i] as NewTab;
 				if (tab.name == val)
 				{
 					selectedTab = tab;
@@ -141,7 +151,7 @@ package com.thelab.hotel32.common
 		}
 		
 		
-		public function onTabClicked(which:Tab):void
+		public function onTabClicked(which:NewTab):void
 		{
 			selectedTab = which;
 		}
@@ -151,12 +161,12 @@ package com.thelab.hotel32.common
 			return "[TabPanel id: " + name + "]";
 		}
 		
-		public function get selectedTab():Tab
+		public function get selectedTab():NewTab
 		{
 			return _selectedTab;
 		}
 		
-		public function set selectedTab(val:Tab):void
+		public function set selectedTab(val:NewTab):void
 		{
 			if (_selectedTab) 
 			{ 
